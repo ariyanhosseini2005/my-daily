@@ -1,0 +1,617 @@
+/* فونت‌های مورد استفاده در سایت */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vazirmatn:wght@100..900&display=swap');
+
+/* ریست کردن استایل‌های پیش‌فرض */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* متغیرهای رنگ و استایل */
+:root {
+    --primary-color: #ff7613;
+    --primary-light: #ff8c3f;
+    --text-color: #a9a9a9;
+    --bg-color: #0a0a0a;
+    --container-bg: #111111;
+    --card-bg: #1a1a1a;
+}
+
+/* تنظیمات پایه HTML */
+html {
+    font-size: 10px;
+}
+
+/* استایل‌های اصلی بدنه */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: white;
+    line-height: 1.6;
+    min-width: 320px;
+}
+
+/* استایل‌های مشترک */
+img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.description {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* استایل‌های عنوان مشترک */
+.title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.title:hover::after {
+    width: 100px;
+}
+
+/* استایل‌های عنوان ستون سمت چپ */
+.skills .title,
+.certification .title,
+.CONTACT .title,
+.social_item .title {
+    text-align: left;
+    margin-bottom: 3rem;
+    padding-left: 0;
+}
+
+/* استایل‌های عنوان ستون سمت راست */
+.edu .title,
+.exp .title,
+.interset .title {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.edu .title::after,
+.exp .title::after,
+.interset .title::after {
+    right: auto;
+    left: 0;
+}
+
+/* تنظیم چینش محتوای ستون راست */
+.edu .item_preTitle,
+.exp .item_preTitle,
+.interset .item_preTitle {
+    text-align: left;
+}
+
+.edu .item_title,
+.exp .item_title,
+.interset .item_title {
+    text-align: left;
+}
+
+.edu .item_subtitle,
+.exp .item_subtitle,
+.interset .item_subtitle {
+    text-align: left;
+}
+
+.edu .description,
+.exp .description,
+.interset .description {
+    text-align: left;
+}
+
+.interst_item {
+    justify-content: flex-start;
+}
+
+/* استایل‌های رسپانسیو */
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* حفظ چینش در نمای موبایل */
+    .skills .title,
+    .certification .title,
+    .social_item .title {
+        text-align: left;
+    }
+    
+    .edu .title,
+    .exp .title,
+    .interset .title {
+        text-align: left;
+    }
+    
+    .edu .title::after,
+    .exp .title::after,
+    .interset .title::after {
+        right: auto;
+        left: 0;
+    }
+}
+
+/* چیدمان اصلی */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 3rem auto;
+    padding: 4rem;
+    background: var(--container-bg);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+/* بخش پروفایل */
+.profile {
+    grid-column: 1 / -1;
+    margin-bottom: 4rem;
+    padding: 3rem;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.profile_container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.profile_profileImg {
+    width: 100%;
+    max-width: 300px;
+}
+
+.profile_profileImg img {
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 118, 19, 0.2);
+}
+
+.profile_name {
+    margin-bottom: 1rem;
+}
+
+.profile_name_firstName {
+    color: white;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.profile_name_lastName {
+    color: var(--primary-color);
+    font-weight: 300;
+    font-size: clamp(3rem, 8vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+    line-height: 1;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.profile_title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.profile .description {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    text-align: left;
+}
+
+/* دکمه دانلود */
+.downloadBtn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    float: left;
+}
+
+.downloadBtn:hover {
+    background: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 118, 19, 0.3);
+}
+
+/* ستون سمت چپ */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* ستون سمت راست */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* کارت‌های بخش‌ها */
+.skills,
+.certification,
+.edu,
+.exp,
+.interset,
+.footer {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* استایل‌های عنوان آیتم‌ها */
+.item_preTitle {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(255, 118, 19, 0.1);
+    border-radius: 4px;
+}
+
+.item_title {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 600;
+    margin: 1rem 0;
+    transition: color 0.3s ease;
+}
+
+.item_title:hover {
+    color: var(--primary-color);
+}
+
+.item_subtitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+/* بخش مهارت‌ها */
+.skill_list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.skill_list li {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.skill_list li:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.skill_list li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-size: 2.2rem;
+}
+
+/* بخش گواهینامه‌ها و تجربیات */
+.certification_item,
+.exp_item {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.certification_item:hover,
+.exp_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* کانتینر تحصیلات و تجربیات */
+.edu-cert-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* بخش علایق */
+.interests {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.interset .title {
+    text-align: left;
+}
+
+.interset .title::after {
+    left: 0;
+    right: auto;
+}
+
+.interst_item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    padding-left: 1rem;
+    border: var(--card-bg);
+    border-radius: 8px;
+}
+
+.interst_item i {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    transition: transform 0.3s ease;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.interst_item span {
+    display: inline-block;
+}
+
+.interst_item:hover {
+    color: white;
+    transform: translateX(5px);
+    border-color: white;
+}
+
+.interst_item:hover i {
+    transform: scale(1.2);
+}
+
+/* تنظیم آیتم‌های تو در تو علایق */
+.interst_item .interst_item {
+    margin-top: 0;
+    margin-left: 2rem;
+    padding-left: 0;
+}
+
+/* استایل‌های رسپانسیو */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 3rem;
+    }
+    
+    .left-column,
+    .right-column {
+        gap: 3rem;
+    }
+    
+    .title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .skill_list li:hover {
+        transform: translateX(0);
+    }
+    
+    .certification_item:hover,
+    .exp_item:hover {
+        transform: translateY(0);
+    }
+    
+    .profile {
+        padding: 2rem;
+    }
+    
+    .profile_container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .profile_profileImg {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .profile_name_firstName,
+    .profile_name_lastName,
+    .profile_title,
+    .profile .description {
+        text-align: center;
+    }
+    
+    .downloadBtn {
+        float: none;
+        display: block;
+        margin: 2rem auto 0;
+        max-width: 200px;
+    }
+}
+/* بخش فوتر و تماس */
+.footer {
+    grid-column: 1 / -1;
+    margin-top: 4rem;
+    padding: 0;
+    border: 2px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+/* افکت حاشیه متحرک */
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--primary-color),
+        transparent
+    );
+    animation: borderGlow 2s linear infinite;
+}
+
+@keyframes borderGlow {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* استایل‌های مشترک تماس و شبکه‌های اجتماعی */
+.contact {
+    padding: 10px;
+}
+.CONTACT,
+.social_item {
+    padding: 2.5rem;
+    margin-top: 5px;
+}
+
+/* استایل‌های اطلاعات تماس */
+.CONTACT_info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 1.5rem;
+}
+
+.CONTACT_info .description,
+.social_links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    margin-left: 4rem;
+}
+
+/* استایل‌های آیکون‌ها */
+.CONTACT_info i,
+.social_links i {
+    color: var(--primary-color);
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.social_links i {
+    font-size: 2.2rem;
+}
+
+/* استایل‌های متن */
+.CONTACT_info span,
+.social_links span {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    text-align: left;
+}
+
+/* افکت‌های هاور */
+.social_links:hover i {
+    transform: scale(1.2);
+}
+
+.social_links:hover span {
+    color: white;
+}
+
+/* رسپانسیو موبایل */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        margin-top: 3rem;
+    }
+
+    .CONTACT,
+    .social_item {
+        padding: 2rem;
+    }
+
+    .title::after {
+        left: 0;
+    }
+}
