@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Daily</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/feather-icons" style="width: 20px; height: 20px;"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
-        @media print {
+        @media print { 
             .container {
                 width: 100%;
                 margin: 0;
@@ -27,24 +27,11 @@
             body {
                 margin: 0;
                 -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            .profile_profileImg img {
-                width: 100%;
-                height: auto;
-            }
-            
-            * {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
             }
         }
-        
-        /* Force background colors to show in PDF */
-        * {
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
+        [data-feather] {
+            width: 20px;
+            height: 20px;
         }
     </style>
 </head>
@@ -52,7 +39,7 @@
     <!-- محتوای اصلی -->
     <div class="container">
         <!-- بخش پروفایل -->
-        <div class="profile">
+        <div class="profile" style="margin-bottom: 20px;">
             <div class="profile_container">
                 <div class="profile_profileImg">
                     <img src="profile.png" alt="ariyan.hosseini">
@@ -70,7 +57,52 @@
                 </div>
             </div>
         </div>
-
+        <footer class="footer" style="margin-top: 20px;">
+            <!-- اطلاعات تماس -->
+            <div class="contact">
+                <h3 class="title">Contact</h3>
+                <div class="contact_info">
+                    <div class="contact_item">
+                        <p class="description">
+                            <i data-feather="phone" style="width: 20px; height: 20px;"></i>
+                            <span>+989210248214</span>
+                        </p>
+                    </div>
+                    <div class="contact_item">
+                        <p class="description">
+                            <i data-feather="map" style="width: 20px; height: 20px;"></i>
+                            <span>Iran, Shiraz</span>
+                        </p>
+                    </div>
+                    <div class="contact_item">
+                        <p class="description">
+                            <i data-feather="mail" style="width: 20px; height: 20px;"></i>
+                            <span>ariyanho138@gmail.com</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- لینک‌های شبکه‌های اجتماعی -->
+            <div class="social">
+                <h3 class="title">Social</h3>
+                <div class="social_links">
+                    <a href="https://instagram.com/ariyan_ho" class="social_link">
+                        <i data-feather="instagram" style="width: 20px; height: 20px;"></i>
+                        <span>@ariyan_ho</span>
+                    </a>
+                    <br><br>
+                    <a href="https://linkedin.com/in/ariyan-hosseini" class="social_link">
+                        <i data-feather="linkedin" style="width: 20px; height: 20px;"></i>
+                        <span>ariyan-hosseini</span>
+                    </a>
+                    <br><br>
+                    <a href="https://github.com/ariyanhosseini2005" class="social_link">
+                        <i data-feather="github" style="width: 20px; height: 20px;"></i>
+                        <span>ariyanhosseini2005</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
         <!-- ستون سمت چپ شامل مهارت‌ها و گواهینامه‌ها -->
         <div class="left-column">
             <!-- بخش مهارت‌ها -->
@@ -141,7 +173,7 @@
                 <div class="edu_item">
                     <p class="item_preTitle">2022-2024</p>
                     <h4 class="item_title">Content Production</h4>
-                    <p class="item_subtitle">Forsat Shirazy</p>
+                    <p class="item_subtitle">Forsat Shirazi</p>
                 </div>
                 <div class="edu_item">
                     <p class="item_preTitle">2024</p>
@@ -171,77 +203,27 @@
             <!-- بخش علایق -->
             <div class="interests">
                 <h3 class="title">Interests</h3>
-                <div class="interest_item" style="display: flex; gap: 30px;">
+                <div class="interest_item" style="display: flex; gap: 40px;">
                     <div class="interest_item">
-                        <i data-feather="music"></i>
+                        <i data-feather="music" style="width: 20px; height: 20px;"></i>
                         <span>Music</span>
                     </div>
                     <div class="interest_item">
-                        <i data-feather="book"></i>
+                        <i data-feather="book" style="width: 20px; height: 20px;"></i>
                         <span>Books</span>
                     </div>
                     <div class="interest_item">
-                        <i data-feather="map"></i>
+                        <i data-feather="map" style="width: 20px; height: 20px;"></i>
                         <span>Travel</span>
                     </div>
                     <div class="interest_item">
-                        <i data-feather="film"></i>
+                        <i data-feather="film" style="width: 20px; height: 20px;"></i>
                         <span>Movies</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <!-- فوتر شامل اطلاعات تماس و شبکه‌های اجتماعی -->
-    <footer class="footer">
-        <!-- اطلاعات تماس -->
-        <div class="contact">
-            <h3 class="title">Contact</h3>
-            <div class="contact_info">
-                <div class="contact_item">
-                    <p class="item_preTitle">Phone</p>
-                    <p class="description">
-                        <i data-feather="phone"></i>
-                        <span>+989210248214</span>
-                    </p>
-                </div>
-                <div class="contact_item">
-                    <p class="item_preTitle">Location</p>
-                    <p class="description">
-                        <i data-feather="map"></i>
-                        <span>Iran, Shiraz</span>
-                    </p>
-                </div>
-                <div class="contact_item">
-                    <p class="item_preTitle">Email</p>
-                    <p class="description">
-                        <i data-feather="mail"></i>
-                        <span>ariyanho138@gmail.com</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- لینک‌های شبکه‌های اجتماعی -->
-        <div class="social">
-            <h3 class="title">Social</h3>
-            <div class="social_links">
-                <a href="https://instagram.com/ariyan_ho" class="social_link">
-                    <i data-feather="instagram"></i>
-                    <span>@ariyan_ho</span>
-                </a>
-                <a href="https://linkedin.com/in/ariyan-hosseini" class="social_link">
-                    <i data-feather="linkedin"></i>
-                    <span>ariyan-hosseini</span>
-                </a>
-                <a href="https://github.com/ariyanhosseini2005" class="social_link">
-                    <i data-feather="github"></i>
-                    <span>ariyanhosseini2005</span>
-                </a>
-            </div>
-        </div>
-    </footer>
-
     <!-- اسکریپت برای راه‌اندازی آیکون‌های Feather -->
     <script>
         feather.replace();
@@ -251,7 +233,7 @@
                 e.preventDefault();
                 
                 try {
-                    // Replace Feather icons with SVG elements
+                    // Wait for Feather icons to load
                     await feather.replace();
                     
                     // Wait for all images to load
@@ -266,41 +248,29 @@
                     // Get the container element
                     const element = document.querySelector('.container');
                     
-                    // Configure PDF options with improved settings
+                    // Configure PDF options
                     const opt = {
-                        margin: [10, 10, 10, 10],
+                        margin: 10,
                         filename: 'ariyan_hosseini_cv.pdf',
-                        image: { type: 'jpeg', quality: 1 },
+                        image: { type: 'jpeg', quality: 0.98 },
                         html2canvas: { 
                             scale: 2,
                             useCORS: true,
                             allowTaint: true,
                             logging: true,
                             letterRendering: true,
-                            foreignObjectRendering: true,
-                            removeContainer: true,
-                            backgroundColor: '#ffffff'
+                            foreignObjectRendering: true
                         },
                         jsPDF: { 
                             unit: 'mm',
                             format: 'a4',
                             orientation: 'portrait',
-                            compress: true,
-                            precision: 16
+                            compress: true
                         }
                     };
 
-                    // Generate PDF with improved error handling
-                    const pdf = html2pdf().set(opt);
-                    
-                    // Add event listeners for better debugging
-                    pdf.from(element)
-                       .toPdf()
-                       .get('pdf')
-                       .then((pdfObject) => {
-                           console.log('PDF generated successfully');
-                       })
-                       .save();
+                    // Generate PDF
+                    await html2pdf().set(opt).from(element).save();
                     
                 } catch (error) {
                     console.error('PDF Generation Error:', error);
@@ -311,4 +281,4 @@
     </script>
     
 </body>
-</html>
+</html> 
